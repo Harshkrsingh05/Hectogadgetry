@@ -38,8 +38,8 @@ export default function Footer() {
           <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary">About</a></li>
         </ul>
       </div>
-      <hr style={{ width: '2px', height: '230px', margin: '0 auto', border: '1px', borderBottom: '1px solid #000' }}/>
-      <div className="col-6 col-md-2 mb-3">
+      
+      <div className="col-6 col-md-2 mb-3 ms-auto">
         <h5>Mail Us</h5>
         <ul className="nav flex-column">
           <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary">Home</a></li>

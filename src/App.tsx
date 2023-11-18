@@ -10,6 +10,7 @@ function App() {
     <>
       <Navbar/>
       <ProductList/>
+      <ProductCard/>
       <Footer/>
     </>
   )
