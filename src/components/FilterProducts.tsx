@@ -1,22 +1,33 @@
 import electronicItems from '../../electronicItems.json';
+import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 interface Product {
-  id: number;
-  name: string;
-  image: string;
-  price: number;
-  category: string;
-  description: string;
-}
-export default function ProductCard() {
+    id: number;
+    name: string;
+    image: string;
+    price: number;
+    category: string;
+    description: string;
+  }
+
+export default function FilterProducts() {
+    const { category } = useParams<{ category: string }>();
+  const filteredProducts = electronicItems.electronicItems.filter(
+    (item: Product) => item.category === category
+  );
   return (
     <>
-      <div className='mx-1 row' style={{width:'98vw'}}>
-      {electronicItems.electronicItems.map((item: Product) => (
+      <h2>{category} Products</h2>
+        <div className='row' style={{width:'98vw'}}>
+        {filteredProducts.map((item: Product) => (
         <div key={item.id} className="product-card border mx-1 my-3 col">
           <Link to={`/product/${item.id}`}>
-            <img src={item.image} alt={item.name} style={{width: '200px', height: '200px'}}/>
+          <img 
+            src={item.image}
+            alt={item.name}
+            style={{width: '200px', height: '200px'}}
+          />
           <h3>{item.name}</h3>
           <p>${item.price.toFixed(2)}</p>
           <button className='btn my-1 mx-1'style={{backgroundColor:'#fb641b'}}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-lightning" viewBox="0 0 16 16">
@@ -29,10 +40,10 @@ export default function ProductCard() {
             </svg>Add to cart
           </button>
           </Link>
-
         </div>
       ))}
     </div>
+      
     </>
   )
 }

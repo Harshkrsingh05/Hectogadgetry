@@ -1,34 +1,36 @@
+import { Link } from 'react-router-dom';
 
 export default function ProductList() {
+  // const categories = ['Screen devices', 'Smart TVs radio', 'Audio Devices', 'Cameras & lens', 'Gaming Accessories', 'Wearable Technology', 'Microcontroller & chips', 'Home Appliances'];
   return (
     <>
     <section className="Types">
     <div className=" card overflow-x-auto mx-5 my-2" style={{overflowX:'scroll',WebkitOverflowScrolling:'touch'}}>
       <div className="row flex-nowrap mx-2">
-        <div className="col-2">
+          <div className="col-2"><Link to={`/products/Screen devices`}> 
             <img src="https://thumbs.dreamstime.com/b/businessman-s-tidy-desktop-work-tools-paperwork-computer-touch-screen-devices-stationery-wooden-surface-top-view-53577371.jpg" style={{width:'50px',height:'50px'}} className="card-img-top" alt="..."/>
-            <div className="card-title">Screen Devices</div></div>
-        <div className="col-2">
-            <img src="https://www.intex.in/cdn/shop/products/LED-WOS5007U-PDP-Slide-1.jpg?v=1652250639" style={{width:'50px',height:'50px'}} className="card-img-top" alt="..."/>
-            <div className="card-title">Smart TVs radio</div></div>
-        <div className="col-2">
+            <div className="card-title">Screen Devices</div></Link></div>
+            <div className="col-2"><Link to={`/products/Smart TVs radio`}>
+            <img src="https://www.lg.com/in/images/tvs/md07554739/gallery/43UQ7550PSF-D-002.jpg" style={{width:'50px',height:'50px'}} className="card-img-top" alt="..."/>
+            <div className="card-title">Smart TVs radio</div></Link></div>
+            <div className="col-2"><Link to={`/products/Audio Devices`}> 
             <img src="https://cdn1.vectorstock.com/i/1000x1000/80/75/modern-and-retro-audio-devices-music-playing-vector-29078075.jpg" style={{width:'50px',height:'50px'}} className="card-img-top" alt="..."/>
-            <div className="card-title">Audio Devices</div></div>
-        <div className="col-2">
+            <div className="card-title">Audio Devices</div></Link></div>
+            <div className="col-2"><Link to={`/products/Cameras & lens`}> 
             <img src="https://thumbs.dreamstime.com/b/professional-digital-camera-1572370.jpg" style={{width:'50px',height:'50px'}} className="card-img-top" alt="..."/>
-            <div className="card-title">Cameras & lens</div></div>
-        <div className="col-2">
+            <div className="card-title">Cameras & lens</div></Link></div>
+            <div className="col-2"><Link to={`/products/Gaming Accessories`}> 
             <img src="https://cdn4.vectorstock.com/i/1000x1000/13/83/gaming-accessories-and-professional-it-equipment-vector-36721383.jpg" style={{width:'50px',height:'50px'}} className="card-img-top" alt="..."/>
-            <div className="card-title">Gaming Accessories</div></div>
-        <div className="col-2">
+            <div className="card-title">Gaming Accessories</div></Link></div>
+            <div className="col-2"><Link to={`/products/Wearable Technology`}> 
             <img src="https://headphonesaddict.com/wp-content/uploads/2021/09/Earbuds-vs-earphones.jpg" style={{width:'50px',height:'50px'}} className="card-img-top" alt="..."/>
-            <div className="card-title">Wearable Technology</div></div>
-        <div className="col-2">
+            <div className="card-title">Wearable Technology</div></Link></div>
+            <div className="col-2"><Link to={`/products/Microcontroller & chips`}> 
             <img src="https://cdn.sparkfun.com/assets/9/1/e/4/8/515b4656ce395f8a38000000.png" style={{width:'50px',height:'50px'}} className="card-img-top" alt="..."/>
-            <div className="card-title">Microcontroller and chips</div></div>
-        <div className="col-2">
+            <div className="card-title">Microcontroller and chips</div></Link></div>
+            <div className="col-2"><Link to={`/products/Home Appliances`}> 
             <img src="https://m.media-amazon.com/images/I/61JIrFcH2sL._AC_UF894,1000_QL80_.jpg" style={{width:'50px',height:'50px'}} className="card-img-top" alt="..."/>
-            <div className="card-title">Home Appliances</div></div>    
+            <div className="card-title">Home Appliances</div></Link></div>
       </div>
     </div>
     </section>
