@@ -1,9 +1,11 @@
+
 import { Link } from 'react-router-dom';
 
 export default function ProductList() {
   // const categories = ['Screen devices', 'Smart TVs radio', 'Audio Devices', 'Cameras & lens', 'Gaming Accessories', 'Wearable Technology', 'Microcontroller & chips', 'Home Appliances'];
   return (
     <>
+    {/* js likhna hai mobile screen ke liye. */}
     <section className="Types">
     <div className=" card overflow-x-auto mx-5 my-2" style={{overflowX:'scroll',WebkitOverflowScrolling:'touch'}}>
       <div className="row flex-nowrap mx-2">
@@ -70,3 +72,4 @@ export default function ProductList() {
     </>
   )
 }
+
