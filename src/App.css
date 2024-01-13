@@ -1,3 +1,5 @@
+
 .card.overflow-x-auto.mx-5.my-2::-webkit-scrollbar{
     display: none;
 }
+
